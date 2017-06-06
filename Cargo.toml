@@ -1,0 +1,7 @@
+[package]
+name = "learned-today"
+version = "0.1.0"
+authors = ["koehr <n@koehr.in>"]
+
+[dependencies]
+pencil = "0.3.0"
