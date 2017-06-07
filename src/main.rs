@@ -5,11 +5,19 @@ extern crate rocket;
 
 mod ui;
 mod api;
+mod shared;
+use shared::{User, AuthMethod};
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-    .mount("/", routes![ui::index])
-    .mount("/api", routes![api::status])
+    .mount("/api", routes![api::root, api::status])
+    .mount("/", routes![ui::spa])
+    .catch(errors![ui::not_found])
+    .manage(User{
+        username: "koehr".into(),
+        method: AuthMethod::SecureLogin,
+        authenticated: true
+    })
 }
 
 fn main() {

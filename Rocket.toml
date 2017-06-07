@@ -1,13 +1,15 @@
 [global]
 address = "localhost"
 port = 1337
-workers = 2
-log = "normal"
 template_dir = "templates/"
 
 [development]
+workers = 2
+log = "normal"
 
 [staging]
+workers = 2
+log = "normal"
 
 [production]
 workers = 8
