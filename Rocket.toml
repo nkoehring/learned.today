@@ -1,0 +1,14 @@
+[global]
+address = "localhost"
+port = 1337
+workers = 2
+log = "normal"
+template_dir = "templates/"
+
+[development]
+
+[staging]
+
+[production]
+workers = 8
+log = "critical"

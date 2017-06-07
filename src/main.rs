@@ -1,13 +1,17 @@
-extern crate pencil;
-use pencil::{Pencil, redirect};
+#![feature(plugin)]
+#![plugin(rocket_codegen)]
+extern crate rocket;
+#[macro_use] extern crate rocket_contrib;
 
 mod ui;
 mod api;
 
+fn rocket() -> rocket::Rocket {
+    rocket::ignite()
+    .mount("/", routes![ui::index])
+    .mount("/api", routes![api::status])
+}
+
 fn main() {
-    let mut app = Pencil::new("/nanobe");
-    app.get("/api", "api_root", |_| redirect("/api/status", 302));
-    app.get("/api/status", "api_status", api::status);
-    app.get("/", "hello", ui::hello);
-    app.run("127.0.0.1:8000");
+  rocket().launch();
 }
