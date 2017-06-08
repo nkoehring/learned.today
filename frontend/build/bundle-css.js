@@ -14,7 +14,7 @@ if(!fs.existsSync(builtCSSPath)) {
 // Get all css files
 const cssDir = path.join(process.cwd(), "css");
 const cssFiles = fs.readdirSync(cssDir);
-let css = "";
+let css = fs.readFileSync(path.join(__dirname, '../node_modules/wingcss/dist/wing.css'));
 
 // Concat all files into one big css file
 for(var i = 0; i < cssFiles.length; i++) {

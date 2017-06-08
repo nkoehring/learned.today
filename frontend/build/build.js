@@ -1,6 +1,7 @@
 "use strict";
 
 const browserify = require("browserify");
+
 const crypto = require('crypto');
 const minifyHTML = require('html-minifier').minify;
 
@@ -26,7 +27,7 @@ bundler.transform({
       '*.moon',
       '*.css'
     ]
-  }, 'uglifyify')
+  }, 'babelify')
   .plugin('moonify/plugins/extract-css.js')
   .bundle()
   .pipe(fs.createWriteStream(tmpJSPath));
@@ -47,7 +48,13 @@ const buildHTML = function() {
     caseSensitive: true,
     keepClosingSlash: true,
     removeAttributeQuotes: false,
-    collapseWhitespace: true
+    collapseWhitespace: true,
+    decodeEntities: true,
+    minifyCSS: true,
+    removeComments: true,
+    sortAttributes: true,
+    sortClassName: true,
+    useShortDoctype: true
   });
 
   minifiedHTML = minifiedHTML.replace(/<link\s+([^>]*?\s+)?href="(\.?\/dist\/([^".]*)\.([^".]*)\.([^".]*))"/gi, `<link $1href="./$3.${cssHash}.$5"`).replace(/<script\s+([^>]*?\s+)?src="(\.?\/dist\/([^".]*)\.([^".]*)\.([^".]*))"/gi, `<script $1src="./$3.${jsHash}.$5"`);
