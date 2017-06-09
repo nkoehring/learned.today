@@ -8,3 +8,14 @@
 @media screen and (min-width: 769px) {
   .hide-on-desktop { display: none; }
 }
+
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+  transition: opacity 1s ease-out 1s;
+  z-index: 1;
+  opacity: 0;
+}
+#app.loaded { opacity: 1; }

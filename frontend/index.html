@@ -14,8 +14,9 @@
         --background-color: #F3F1F1;
         --text-color: #445;
         --outline-color: #ddd;
+        --shade-color: rgba(0,0,0,.1);
       }
-      body {
+      html,body {
         background: var(--background-color);
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         font-weight: 200;
@@ -36,15 +37,8 @@
         padding: 0;
         border: none;
       }
-      #app {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background: var(--background-color);
-        transition: opacity 1s ease-out 1s;
-        z-index: 1;
-        opacity: 0;
-      }
-      #app.loaded { opacity: 1; }
+      #app { opacity: 0; }
+
       #loading-screen {
         display: flex;
         align-items: center;
