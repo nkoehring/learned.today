@@ -16,6 +16,7 @@
     ]
   },
   "dependencies": {
+    "moon-router": "^0.0.5",
     "moonjs": "0.10.0",
     "wingcss": "^1.0.0-beta"
   },

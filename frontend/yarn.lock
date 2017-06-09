@@ -948,7 +948,7 @@ browserify-zlib@~0.1.2:
   dependencies:
     pako "~0.2.0"
 
-browserify@14.1.0, browserify@^14.0.0:
+browserify@14.1.0:
   version "14.1.0"
   resolved "https://registry.yarnpkg.com/browserify/-/browserify-14.1.0.tgz#0508cc1e7bf4c152312c2fa523e676c0b0b92311"
   dependencies:
@@ -1000,7 +1000,7 @@ browserify@14.1.0, browserify@^14.0.0:
     vm-browserify "~0.0.1"
     xtend "^4.0.0"
 
-browserify@^14.3.0:
+browserify@^14.0.0, browserify@^14.3.0:
   version "14.4.0"
   resolved "https://registry.yarnpkg.com/browserify/-/browserify-14.4.0.tgz#089a3463af58d0e48d8cd4070b3f74654d5abca9"
   dependencies:
@@ -2407,6 +2407,10 @@ moon-component-compiler@0.0.2:
   resolved "https://registry.yarnpkg.com/moon-component-compiler/-/moon-component-compiler-0.0.2.tgz#6edb3123b7d0a983424f6b60e55fe1bf01f80c5b"
   dependencies:
     himalaya "^0.2.8"
+
+moon-router@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/moon-router/-/moon-router-0.0.5.tgz#e22ada93d5307ed13d1b1bfc97c0345cf521f7ec"
 
 moonify@0.0.14:
   version "0.0.14"
