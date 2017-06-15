@@ -1,0 +1,38 @@
+<header>
+  <h1>
+    {{#if username}}
+      {{ username }}
+      <span>.</span>
+    {{/if}}
+    learned
+    <span>.</span>
+    today
+    {{#if !username}}
+      <span>/</span>
+      login
+    {{/if}}
+  </h1>
+</header>
+
+<style>
+  header {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: space-between;
+    align-content: center;
+    height: 8rem;
+  }
+  header > h1 {
+    width: 100%;
+    font-size: 6rem;
+    line-height: 8rem;
+    margin: 2rem;
+    color: var(--text-color);
+    text-align: center;
+  }
+  header > h1 > span {
+    margin: 0 .3em;
+    font-weight: 200;
+    color: var(--outline-color);
+  }
+</style>

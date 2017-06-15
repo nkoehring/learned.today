@@ -9,7 +9,6 @@
   .hide-on-desktop { display: none; }
 }
 
-
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,3 +18,7 @@
   opacity: 0;
 }
 #app.loaded { opacity: 1; }
+#app.menu #menu-toggle > .line { height: .1rem; }
+#app.menu #menu-toggle > .middle { opacity: 0; }
+#app.menu #menu-toggle > .top { transform: rotate(-30deg); }
+#app.menu #menu-toggle > .bottom { transform: rotate(30deg); }

@@ -1,0 +1,35 @@
+<aside class="col-2">
+  <MainMenu on:menutoggle="toggleMenu()" />
+</aside>
+
+<div class="col-10">
+  <MainHeader username="{{username}}" />
+</div>
+
+<script>
+  import MainMenu from './MainMenu.html'
+  import MainHeader from './MainHeader.html'
+
+  export default {
+    data () {
+      return {
+        username: ''
+      }
+    },
+    components: { MainMenu, MainHeader },
+    methods: {
+      toggleMenu () {
+        console.log('menu toggled')
+        document.getElementById('app').classList.toggle('menu')
+      }
+    },
+    oncreate () {
+      setTimeout(() => {
+        document.getElementById('app').classList.add('loaded')
+      })
+    }
+  }
+</script>
+
+<style>
+</style>

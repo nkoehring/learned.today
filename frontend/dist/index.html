@@ -1,1 +1,77 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1" name="viewport"><meta content="{{description}}" name="description"><meta content="{{author}}" name="author"><title>{{name}}</title><link href="./css/build.df5af707b4.css" rel="stylesheet" type="text/css"/><style>:root{--highlight-color:#F0AF00;--background-color:#F3F1F1;--text-color:#445;--outline-color:#ddd;--shade-color:rgba(0,0,0,.1)}body,html{background:var(--background-color);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;font-weight:200;color:var(--text-color)}em{font-style:normal;color:var(--highlight-color)}#app,#loading-screen{display:block;position:fixed;left:0;top:0;width:100%;min-height:90vh;margin:0;padding:0;border:none}#app{opacity:0}#loading-screen{display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:0}#loading-screen h1{margin:auto;font-weight:200;font-size:86px;color:var(--text-color);line-height:1em;margin:0}@media screen and (max-width:420px){#loading-screen h1{max-width:330px}}@media screen and (max-width:320px){#loading-screen h1{max-width:240px}}</style></head><body><div id="loading-screen"><h1>what did you learn today<em>?</em></h1></div><div id="app"><learned-today/></div><script src="./js/build.da4e498f75.js"></script></body></html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{description}}">
+    <meta name="author" content="{{author}}">
+    <title>learned·today</title>
+    <link rel="stylesheet" type="text/css" href="wing.min.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <style>
+      :root {
+        --highlight-color: #F0AF00;
+        --background-color: #F3F1F1;
+        --text-color: #445;
+        --outline-color: #ddd;
+        --shade-color: rgba(0,0,0,.1);
+      }
+      html,body {
+        background: var(--background-color);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-weight: 200;
+        color: var(--text-color);
+      }
+      em {
+        font-style: normal;
+        color: var(--highlight-color);
+      }
+      #loading-screen, #app {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        min-height: 90vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      #app { opacity: 0; }
+
+      #loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 0;
+      }
+      #loading-screen h1 {
+        margin: auto;
+        font-weight: 200;
+        font-size: 86px;
+        color: var(--text-color);
+        line-height: 1em;
+        margin: 0;
+      }
+      @media screen and (max-width: 420px) {
+        #loading-screen h1 { max-width: 330px; }
+      }
+      @media screen and (max-width: 320px) {
+        #loading-screen h1 { max-width: 240px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loading-screen">
+      <h1>
+        what did you learn today<em>?</em>
+      </h1>
+    </div>
+    <div id="app"></div>
+    <script src="app.js"></script>
+  </body>
+
+</html>
